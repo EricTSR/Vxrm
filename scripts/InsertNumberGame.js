@@ -13,7 +13,6 @@ let taskTries = 0;
 function startGame() {
   document.getElementById("nextTaskBtn").style.visibility = "hidden";
   document.getElementById("insertNumberGameResults").style.display = "none";
-  document.getElementById("insertNumberGameResults").style.display = "none";
 
   new NumberGame("value1", "value2", "operator", "result", 0);
   document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe..."

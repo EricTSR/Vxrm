@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>WELL CUM</title>
+
+    <title>Maths</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->>
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- JS -->
+    <script src="scripts/main.js"></script>
+
 </head>
 <body>
-    <h1>Welcome to the most fun math games website ever PauseChamp!</h1>
-    <ul>
-        <li><a href="sites/insertNumberGame.html">Fun Number game</a></li>
-        <li><a href="sites/DoubleOrHalveGame.html">Fun other game</a></li>
-    </ul>
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+<form id="login">
+    <h3>WILLKOMMEN</h3>
+    <label for="username">Benutzername</label>
+    <input type="text" placeholder="Name" id="username">
+    <label for="level" id="labelLevel">Klasse: 1</label>
+    <input onchange="changeLevelName()" type="range" value="0" min="0" max="3" id="level">
+    <a href="sites/home.html"></a>
+    <button onclick="logUser()">
+        Anmelden
+    </button>
+    <h4 style="font-size: 13px">Wenn der Knopf nicht funktioniert klicke <a onclick="logUser()" href="sites/home.html">hier</a>!</h4>
+</form>
 
 </body>
 </html>
+
