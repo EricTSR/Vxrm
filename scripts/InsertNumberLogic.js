@@ -1,5 +1,5 @@
 class NumberGame {
-  constructor(aID, bID, opID, resultID, level) {
+  constructor(aID, bID, opID, resultID, level, difficulty) {
     this.a = "X";
     this.operator = "";
     this.b = "X";
@@ -9,6 +9,7 @@ class NumberGame {
     this.opID = opID;
     this.resultID = resultID;
     this.level = level;
+    this.difficulty = difficulty;
     this.distance = 0;
     this.range = 0;
 
@@ -140,11 +141,11 @@ class NumberGame {
    * Sets the max difference between two numbers
    */
   setDistance() {
-    if (this.level === 0) {
+    if (this.difficulty === 0) {
       this.distance = this.range * 0.25;
-    } else if (this.level === 1) {
+    } else if (this.difficulty === 1) {
       this.distance = this.range * 0.50
-    } else if (this.level === 2) {
+    } else if (this.difficulty === 2) {
       this.distance = this.range * 0.75
     } else {
       this.distance = this.range;

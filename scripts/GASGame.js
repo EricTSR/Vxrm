@@ -7,16 +7,19 @@ let tries = 0;
 
 let taskTries = 0;
 
+let level = 0;
+
 /**
  * Stats the game and generates the first task
  */
-function startGame() {
+function startGame(level) {
+  this.level = level;
   document.getElementById("nextTaskBtn").style.visibility = "hidden";
   document.getElementById("insertNumberGameResults").style.display = "none";
-  document.getElementById("insertNumberGameResults").style.display = "none";
+  document.getElementById("insertNumberGame").style.display = "block";
 
-  new NumberGame("value1", "value2", "operator", "result", 0);
-  document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe..."
+  new GASLogic("value1", "value2", "operator", level);
+  document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe...";
 }
 
 
@@ -44,9 +47,9 @@ function Done() {
   document.getElementById("tries").innerText = "Fehler: " + tries;
 }
 
-function submit() {
+function submitNumberGame() {
 
-  if (checkLevel("value1", "operator", "value2", "result")) {
+  if (checkLevel("value1", "operator", "value2")) {
     updateText("WoW, super gemacht!")
     setTimeout("newTask()", 1000);
   } else {
@@ -94,7 +97,7 @@ function newTask() {
   updateText("Mhhh, schwierige Aufgabe...");
 
   //Generate new game
-  new NumberGame("value1", "value2", "operator", "result", 0);
+  new GASLogic("value1", "value2", "operator", this.level);
 }
 
 /**
@@ -109,13 +112,30 @@ function updateText(text) {
  * Checks if the Task is solved successfully
  * @returns {boolean}
  */
-function checkLevel(value1, operator, value2, result) {
+function checkLevel(value1, operator, value2) {
   let a = document.getElementById(value1).value;
   let op = document.getElementById(operator).value;
   let b = document.getElementById(value2).value;
-  let res = document.getElementById(result).value;
 
-  console.log(a + op + b + "=" + res);
+  if (op === "=") {
+    if (a === b) {
+      return true;
+    }
+  } else if (op === ">") {
+    console.log("S")
+    if (a > b) {
+      return true;
+    }
+  } else if (op === "<") {
+    if (a < b) {
+      return true
+    }
+  } else {
+    console.log(a  + "|" + op + "|" + b);
+    return false;
+  }
+
+  return true;
 
 }
 

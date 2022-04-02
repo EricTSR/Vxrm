@@ -10,12 +10,15 @@ let taskTries = 0;
 /**
  * Stats the game and generates the first task
  */
-function startGame() {
+function startGame(level, difficulty) {
+
+  document.getElementById("selectLevel").style.display = "none";
   document.getElementById("nextTaskBtn").style.visibility = "hidden";
   document.getElementById("insertNumberGameResults").style.display = "none";
+  document.getElementById("insertNumberGame").style.display = "block";
 
-  new NumberGame("value1", "value2", "operator", "result", 0);
-  document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe..."
+  new NumberGame("value1", "value2", "operator", "result", level, difficulty);
+  document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe...";
 }
 
 

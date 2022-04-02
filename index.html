@@ -15,24 +15,85 @@
     <script src="scripts/main.js"></script>
 
 </head>
-<body>
-<div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-</div>
+<body onload="start()">
 
 <form id="login">
     <h3>WILLKOMMEN</h3>
     <label for="username">Benutzername</label>
     <input type="text" placeholder="Name" id="username">
-    <label for="level" id="labelLevel">Klasse: 1</label>
-    <input onchange="changeLevelName()" type="range" value="0" min="0" max="3" id="level">
-    <a href="sites/home.html"></a>
-    <button onclick="logUser()">
-        Anmelden
-    </button>
-    <h4 style="font-size: 13px">Wenn der Knopf nicht funktioniert klicke <a onclick="logUser()" href="sites/home.html">hier</a>!</h4>
+    <div onclick="login()" class="button">Anmelden</div>
 </form>
+
+<section id="class_selection" >
+    <div class="container">
+        <h1>Klasse 1</h1> <br>
+        <p>Hier erwarten dich coole Spiele, im Zahlenbereich von 0 bis 20. Rechne + und -, verdopple oder halbiere, oder
+            helfe CODI dabei seine Pyramiden zu errichten!</p>
+        <button onclick="displayGames(0)">Spielen</button>
+    </div>
+    <div class="container">
+        <h1>Klasse 2</h1> <br>
+        <p>Hier erwarten dich coole Spiele, im Zahlenbereich von 0 bis 50. Rechne + und -, verdopple oder halbiere, oder
+            helfe CODI dabei seine Pyramiden zu errichten!</p>
+        <button onclick="displayGames(1)">Spielen</button>
+    </div>
+    <div class="container">
+        <h1>Klasse 3</h1> <br>
+        <p>Hier erwarten dich coole Spiele, im Zahlenbereich von 0 bis 500. Rechne +, -, * und /, verdopple oder
+            halbiere, löse spannende Sachtexte oder helfe CODI dabei seine Pyramiden zu errichten!</p>
+        <button onclick="displayGames(2)">Spielen</button>
+    </div>
+    <div class="container">
+        <h1>Klasse 4</h1> <br>
+        <p>Hier erwarten dich coole Spiele, im Zahlenbereich von 0 bis 1000. Rechne +, -, * und /, verdopple oder
+            halbiere, löse spannende Sachtexte oder helfe CODI dabei seine Pyramiden zu errichten!</p>
+        <button onclick="displayGames(3)">Spielen</button>
+    </div>
+</section>
+
+<section id="levels_selection">
+    <h2 class="welcome">Hi</h2>
+    <div class="container" id="rechnen">
+        <h1>Rechnen</h1> <br>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <button><a href="sites/insertNumberGame.html">Spielen</a></button>
+    </div>
+
+    <div class="container" id="guk">
+        <h1>Größer und Kleiner</h1> <br>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <button><a href="sites/insertNumberGame.html">Spielen</a></button>
+    </div>
+
+    <div class="container" id="vuh">
+        <h1>Verdopple und Halbiere</h1> <br>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <button><a href="sites/insertNumberGame.html">Spielen</a></button>
+    </div>
+
+    <div class="container" id="sachaufgaben">
+        <h1>Sachaufgaben</h1> <br>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <button><a href="sites/insertNumberGame.html">Spielen</a></button>
+    </div>
+    <div class="container" id="pyramide">
+        <h1>Pyramide</h1> <br>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <button><a href="sites/insertNumberGame.html">Spielen</a></button>
+    </div>
+
+</section>
+
 
 </body>
 </html>

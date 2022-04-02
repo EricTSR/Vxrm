@@ -64,8 +64,14 @@ p {
   margin-top: 0.5em;
 }
 
+.welcome {
+  text-align: center;
+  color: white;
+
+}
+
 form {
-  height: 500px;
+  height: auto;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
@@ -88,7 +94,26 @@ form * {
 }
 
 
-#levels {
+.button {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#class_selection {
+  display: flex;
+}
+
+
+#levels_selection {
   display: flex;
 }
 
@@ -147,7 +172,20 @@ button {
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
+  text-decoration: none;
+
   border-radius: 5px;
   cursor: pointer;
+}
+
+button a {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
