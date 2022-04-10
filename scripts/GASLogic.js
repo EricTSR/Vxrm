@@ -13,7 +13,6 @@ class GASLogic {
     this.setLevel();
   }
 
-
   /**
    * Sets the range of the numbers
    */
@@ -41,8 +40,8 @@ class GASLogic {
   }
 
   setValue(value, id) {
-      document.getElementById(id).value = value;
-      document.getElementById(id).readOnly = true;
+    document.getElementById(id).value = value;
+    document.getElementById(id).readOnly = true;
 
   }
 

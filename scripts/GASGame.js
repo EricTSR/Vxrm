@@ -18,9 +18,10 @@ function startGame(level) {
   document.getElementById("insertNumberGameResults").style.display = "none";
   document.getElementById("insertNumberGame").style.display = "block";
 
+
   new GASLogic("value1", "value2", "operator", level);
-  document.getElementById("text").innerText = "Mhhh, schwierige Aufgabe...";
-}
+
+
 
 
 /**
@@ -131,7 +132,7 @@ function checkLevel(value1, operator, value2) {
       return true
     }
   } else {
-    console.log(a  + "|" + op + "|" + b);
+    console.log(a + "|" + op + "|" + b);
     return false;
   }
 

@@ -108,6 +108,11 @@ input:focus, textarea:focus, select:focus{
   background-color: #706993;
 }
 
+.container input {
+  border-radius: 15px;
+  background-color: transparent;
+}
+
 /* --- insertNumberGame --- */
 
 /* --- insertNumberGameResults --- */
